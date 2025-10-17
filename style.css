@@ -1,0 +1,4 @@
+/* Gebruik het Inter lettertype voor de hele pagina */
+body {
+    font-family: 'Inter', sans-serif;
+}
