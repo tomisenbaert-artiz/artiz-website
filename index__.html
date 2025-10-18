@@ -1,0 +1,294 @@
+<!DOCTYPE html>
+<html lang="nl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Art'Iz Kunstacademie</title>
+    
+    <!-- Tailwind CSS via CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    
+    <!-- Google Fonts: Inter -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    
+    <!-- Link naar externe CSS file -->
+    <link rel="stylesheet" href="style.css">
+    
+</head>
+<body class="bg-gray-50">
+
+    <!-- Header & Navigatie -->
+    <header class="bg-white shadow-md sticky top-0 z-50">
+        <nav class="container mx-auto px-6 py-4 flex justify-between items-center">
+            <!-- School Logo/Naam -->
+            <a href="#" class="text-2xl font-bold text-blue-800">
+                Art'Iz Kunstacademie
+            </a>
+            
+            <!-- Desktop Menu -->
+            <div class="hidden md:flex items-center space-x-6">
+                <a href="#home" class="text-gray-600 hover:text-blue-600 transition duration-300">Home</a>
+                <a href="#kalender" class="text-gray-600 hover:text-blue-600 transition duration-300">Kalender</a>
+                <!-- Dropdown Menu Item -->
+                <div class="relative group">
+                    <button class="text-gray-600 hover:text-blue-600 transition duration-300 flex items-center">
+                        Aanbod
+                        <svg class="w-4 h-4 ml-1" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg>
+                    </button>
+                    <div class="absolute hidden group-hover:block bg-white shadow-lg rounded-md mt-2 w-48 py-2 z-20">
+                        <a href="#beeld" class="block px-4 py-2 text-sm text-gray-700 hover:bg-blue-50">Beeld</a>
+                        <a href="#muziek" class="block px-4 py-2 text-sm text-gray-700 hover:bg-blue-50">Muziek</a>
+                        <a href="#woord" class="block px-4 py-2 text-sm text-gray-700 hover:bg-blue-50">Woord</a>
+                    </div>
+                </div>
+
+                
+                <a href="#inschrijven" class="text-gray-600 hover:text-blue-600 transition duration-300">Inschrijven</a>
+                <a href="#socialemedia" class="text-gray-600 hover:text-blue-600 transition duration-300">Sociale media</a>
+                <a href="#contact" class="text-gray-600 hover:text-blue-600 transition duration-300">Contact</a>
+            </div>
+            
+            <!-- Contact Knop -->
+            <a href="#contact" class="hidden md:block bg-blue-600 text-white px-4 py-2 rounded-lg hover:bg-blue-700 transition duration-300">
+                Neem Contact Op
+            </a>
+
+            <!-- Mobiele Menu Knop -->
+            <div class="md:hidden">
+                <button id="menu-btn" class="text-gray-600 focus:outline-none">
+                    <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7"></path>
+                    </svg>
+                </button>
+            </div>
+        </nav>
+
+        <!-- Mobiel Menu -->
+        <div id="mobile-menu" class="hidden md:hidden bg-white border-t">
+            <a href="#home" class="block py-2 px-6 text-gray-600 hover:bg-blue-50">Home</a>
+            
+            <!-- Mobile Dropdown -->
+            <div>
+                <button id="mobile-dropdown-btn" class="w-full text-left flex justify-between items-center py-2 px-6 text-gray-600 hover:bg-blue-50">
+                    <span>Over Ons</span>
+                    <svg class="w-4 h-4 transition-transform transform" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg>
+                </button>
+                <div id="mobile-dropdown-menu" class="hidden pl-8 bg-gray-50">
+                    <a href="#visie" class="block py-2 px-6 text-sm text-gray-600 hover:bg-blue-100">Visie & Missie</a>
+                    <a href="#team" class="block py-2 px-6 text-sm text-gray-600 hover:bg-blue-100">Ons Team</a>
+                    <a href="#geschiedenis" class="block py-2 px-6 text-sm text-gray-600 hover:bg-blue-100">Geschiedenis</a>
+                </div>
+            </div>
+
+            <a href="#nieuws" class="block py-2 px-6 text-gray-600 hover:bg-blue-50">Nieuws</a>
+            <a href="#kalender" class="block py-2 px-6 text-gray-600 hover:bg-blue-50">Kalender</a>
+            <a href="#contact" class="block py-2 px-6 text-gray-600 hover:bg-blue-50">Contact</a>
+            <div class="px-6 py-4">
+                 <a href="#contact" class="block w-full text-center bg-blue-600 text-white px-4 py-2 rounded-lg hover:bg-blue-700 transition duration-300">
+                    Neem Contact Op
+                </a>
+            </div>
+        </div>
+    </header>
+
+    <main>
+        <!-- Hero Sectie -->
+        <section id="home" class="relative text-white py-20 md:py-32">
+            <div class="absolute inset-0 bg-cover bg-center opacity-20" style="background-image: url('/images/artiz-banner-background.jpg');"></div>
+            <div class="container mx-auto px-6 text-center relative z-10">
+                <h1 class="text-4xl md:text-6xl font-bold mb-4">Welkom</h1>
+                <p class="text-lg md:text-xl mb-8 max-w-3xl mx-auto">Waar elke leerling de kans krijgt om te groeien, leren en schitteren.</p>
+                <a href="#" class="bg-yellow-500 text-blue-900 font-bold py-3 px-8 rounded-lg hover:bg-yellow-400 transition duration-300 text-lg">
+                    Ontdek Onze School
+                </a>
+            </div>
+        </section>
+
+        <!-- Over Ons Sectie -->
+        <section id="over-ons" class="py-16 md:py-24 bg-white">
+            <div class="container mx-auto px-6">
+                <div class="grid md:grid-cols-3 gap-12 items-center">
+                    <div>
+                        <h2 class="text-3xl font-bold text-gray-800 mb-4">Onze Visie & Missie</h2>
+                        <p class="text-gray-600 mb-4">
+                            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+                        </p>
+                        <p class="text-gray-600">
+                            Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+                        </p>
+                    </div>
+                    <div>
+                        <img src="https://placehold.co/600x400/E2E8F0/334155?text=Lachende+Leerlinge2n" alt="Leerlingen" class="rounded-lg shadow-xl w-full h-auto">
+                    </div>
+                    <div>
+                        <img src="https://placehold.co/600x400/E2E8F0/334155?text=Lachende+Leerlingen" alt="Leerlingen" class="rounded-lg shadow-xl w-full h-auto">
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Nieuws Sectie -->
+        <section id="nieuws" class="py-16 md:py-24">
+            <div class="container mx-auto px-6">
+                <h2 class="text-3xl font-bold text-center text-gray-800 mb-12">Laatste Nieuws</h2>
+                <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+                    <!-- Nieuws Kaart 1 -->
+                    <div class="bg-white rounded-lg shadow-lg overflow-hidden transform hover:-translate-y-2 transition duration-300">
+                        <img src="https://placehold.co/600x400/3B82F6/FFFFFF?text=Sportdag" alt="Sportdag" class="w-full h-48 object-cover">
+                        <div class="p-6">
+                            <span class="text-sm text-gray-500">12 Oktober 2025</span>
+                            <h3 class="font-bold text-xl my-2 text-gray-800">Jaarlijkse Sportdag was een Groot Succes!</h3>
+                            <p class="text-gray-600 text-base mb-4">
+                                Onze leerlingen hebben alles gegeven tijdens de zonnige sportdag. Bekijk de foto's en de resultaten hier.
+                            </p>
+                            <a href="#" class="text-blue-600 font-semibold hover:underline">Lees meer &rarr;</a>
+                        </div>
+                    </div>
+                    <!-- Nieuws Kaart 2 -->
+                    <div class="bg-white rounded-lg shadow-lg overflow-hidden transform hover:-translate-y-2 transition duration-300">
+                        <img src="https://placehold.co/600x400/F59E0B/FFFFFF?text=Wetenschap" alt="Wetenschapsbeurs" class="w-full h-48 object-cover">
+                        <div class="p-6">
+                            <span class="text-sm text-gray-500">5 Oktober 2025</span>
+                            <h3 class="font-bold text-xl my-2 text-gray-800">Innovatieve Projecten op de Wetenschapsbeurs</h3>
+                            <p class="text-gray-600 text-base mb-4">
+                                Van vulkanen tot robots, de creativiteit kende geen grenzen op onze jaarlijkse wetenschapsbeurs.
+                            </p>
+                            <a href="#" class="text-blue-600 font-semibold hover:underline">Lees meer &rarr;</a>
+                        </div>
+                    </div>
+                    <!-- Nieuws Kaart 3 -->
+                    <div class="bg-white rounded-lg shadow-lg overflow-hidden transform hover:-translate-y-2 transition duration-300">
+                        <img src="https://placehold.co/600x400/10B981/FFFFFF?text=Muziek" alt="Muziekles" class="w-full h-48 object-cover">
+                        <div class="p-6">
+                            <span class="text-sm text-gray-500">28 September 2025</span>
+                            <h3 class="font-bold text-xl my-2 text-gray-800">Nieuwe Muziekinstrumenten voor de Muziekles</h3>
+                            <p class="text-gray-600 text-base mb-4">
+                                Dankzij een gulle donatie hebben we onze muzieklessen kunnen uitbreiden met nieuwe instrumenten.
+                            </p>
+                            <a href="#" class="text-blue-600 font-semibold hover:underline">Lees meer &rarr;</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Kalender Sectie -->
+        <section id="kalender" class="py-16 md:py-24 bg-white">
+            <div class="container mx-auto px-6">
+                <h2 class="text-3xl font-bold text-center text-gray-800 mb-12">Belangrijke Data</h2>
+                <div class="max-w-2xl mx-auto">
+                    <div class="divide-y divide-gray-200">
+                        <div class="py-4 flex items-center">
+                            <div class="text-center w-24 mr-4">
+                                <p class="text-3xl font-bold text-blue-600">25</p>
+                                <p class="text-sm text-gray-500">OKT</p>
+                            </div>
+                            <div>
+                                <h3 class="font-semibold text-lg text-gray-800">Ouderavond Groep 8</h3>
+                                <p class="text-gray-600">Een informatieve avond over de overgang naar het middelbaar onderwijs.</p>
+                            </div>
+                        </div>
+                        <div class="py-4 flex items-center">
+                            <div class="text-center w-24 mr-4">
+                                <p class="text-3xl font-bold text-blue-600">10</p>
+                                <p class="text-sm text-gray-500">NOV</p>
+                            </div>
+                            <div>
+                                <h3 class="font-semibold text-lg text-gray-800">Herfstvakantie Start</h3>
+                                <p class="text-gray-600">De school is gesloten voor de herfstvakantie. We zien iedereen graag terug op 18 november.</p>
+                            </div>
+                        </div>
+                        <div class="py-4 flex items-center">
+                            <div class="text-center w-24 mr-4">
+                                <p class="text-3xl font-bold text-blue-600">05</p>
+                                <p class="text-sm text-gray-500">DEC</p>
+                            </div>
+                            <div>
+                                <h3 class="font-semibold text-lg text-gray-800">Sinterklaasviering</h3>
+                                <p class="text-gray-600">Een feestelijke dag voor alle onderbouw klassen met een bezoek van de Sint.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <!-- Footer -->
+    <footer id="contact" class="bg-gray-800 text-white">
+        <div class="container mx-auto px-6 py-12">
+            <div class="grid md:grid-cols-3 gap-8">
+                <!-- Contact Info -->
+                <div>
+                    <h3 class="font-bold text-xl mb-4">Art'Iz Kunstacademie</h3>
+                    <p class="text-gray-400">Kruisstraat 13</p>
+                    <p class="text-gray-400">8870 IZEGEM</p>
+                    <p class="mt-4 text-gray-400">
+                        <a href="tel:0123456789" class="hover:text-white">Tel: +3251 30 34 35</a><br>
+                        <a href="mailto:info@schoolnaam.nl" class="hover:text-white">Email: administratie@artiz-izegem.be</a>
+                    </p>
+                </div>
+                <!-- Snelle Links -->
+                <div>
+                    <h3 class="font-bold text-xl mb-4">Snelle Links</h3>
+                    <ul>
+                        <li class="mb-2"><a href="#" class="text-gray-400 hover:text-white">Inschrijven</a></li>
+                        <li class="mb-2"><a href="#" class="text-gray-400 hover:text-white">Schoolgids</a></li>
+                        <li class="mb-2"><a href="#" class="text-gray-400 hover:text-white">Vacatures</a></li>
+                        <li class="mb-2"><a href="#" class="text-gray-400 hover:text-white">Privacybeleid</a></li>
+                    </ul>
+                </div>
+                <!-- Social Media -->
+                <div>
+                    <h3 class="font-bold text-xl mb-4">Volg Ons</h3>
+                    <div class="flex space-x-4">
+                        <a href="#" aria-label="Facebook" class="text-gray-400 hover:text-white">
+                            <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M22 12c0-5.523-4.477-10-10-10S2 6.477 2 12c0 4.991 3.657 9.128 8.438 9.878v-6.987h-2.54V12h2.54V9.797c0-2.506 1.492-3.89 3.777-3.89 1.094 0 2.238.195 2.238.195v2.46h-1.26c-1.243 0-1.63.771-1.63 1.562V12h2.773l-.443 2.89h-2.33v6.988C18.343 21.128 22 16.991 22 12z" clip-rule="evenodd" /></svg>
+                        </a>
+                        <a href="#" aria-label="Instagram" class="text-gray-400 hover:text-white">
+                           <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M12.315 2c2.43 0 2.784.013 3.808.06 1.064.049 1.791.218 2.427.465a4.902 4.902 0 011.772 1.153 4.902 4.902 0 011.153 1.772c.247.636.416 1.363.465 2.427.048 1.024.06 1.378.06 3.808s-.012 2.784-.06 3.808c-.049 1.064-.218 1.791-.465 2.427a4.902 4.902 0 01-1.153 1.772 4.902 4.902 0 01-1.772 1.153c-.636.247-1.363.416-2.427.465-1.024.048-1.378.06-3.808.06s-2.784-.012-3.808-.06c-1.064-.049-1.791-.218-2.427-.465a4.902 4.902 0 01-1.772-1.153 4.902 4.902 0 01-1.153-1.772c-.247-.636-.416-1.363-.465-2.427-.048-1.024-.06-1.378-.06-3.808s.012-2.784.06-3.808c.049-1.064.218-1.791.465-2.427a4.902 4.902 0 011.153-1.772A4.902 4.902 0 016.08 2.525c.636-.247 1.363-.416 2.427-.465C9.53 2.013 9.884 2 12.315 2zm-1.161 1.043c-1.087.05-1.838.22-2.444.457a3.891 3.891 0 00-1.42 1.052 3.891 3.891 0 00-1.052 1.42c-.237.606-.407 1.357-.457 2.444-.049 1.06-.06 1.374-.06 3.803s.012 2.744.06 3.803c.05 1.087.22 1.838.457 2.444a3.891 3.891 0 001.052 1.42 3.891 3.891 0 001.42 1.052c.606.237 1.357.407 2.444.457 1.06.049 1.374.06 3.803.06s2.744-.012 3.803-.06c1.087-.05 1.838-.22 2.444-.457a3.891 3.891 0 001.42-1.052 3.891 3.891 0 001.052-1.42c.237-.606.407-1.357.457-2.444.049-1.06.06-1.374.06-3.803s-.012-2.744-.06-3.803c-.05-1.087-.22-1.838-.457-2.444a3.891 3.891 0 00-1.052-1.42 3.891 3.891 0 00-1.42-1.052c-.606-.237-1.357-.407-2.444-.457-1.06-.049-1.374-.06-3.803-.06s-2.744.012-3.803.06zM12 6.865a5.135 5.135 0 100 10.27 5.135 5.135 0 000-10.27zm0 8.468a3.333 3.333 0 110-6.666 3.333 3.333 0 010 6.666zm5.338-9.87a1.2 1.2 0 100 2.4 1.2 1.2 0 000-2.4z" clip-rule="evenodd" /></svg>
+                        </a>
+                         <a href="#" aria-label="YouTube" class="text-gray-400 hover:text-white">
+                            <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M19.812 5.418c.861.23 1.538.907 1.768 1.768C21.998 8.78 22 12 22 12s0 3.22-.42 4.814a2.506 2.506 0 0 1-1.768 1.768c-1.594.42-7.812.42-7.812.42s-6.218 0-7.812-.42a2.506 2.506 0 0 1-1.768-1.768C2 15.22 2 12 2 12s0-3.22.42-4.814a2.506 2.506 0 0 1 1.768-1.768C5.782 5 12 5 12 5s6.218 0 7.812.42zM15.565 12L10 8.75v6.5L15.565 12z" clip-rule="evenodd" /></svg>
+                        </a>
+                    </div>
+                </div>
+            </div>
+            <div class="border-t border-gray-700 mt-8 pt-6 text-center text-gray-500">
+                <p>&copy; 2025 Art'Iz. Alle rechten voorbehouden.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- JavaScript voor mobiel menu -->
+    <script>
+        const menuBtn = document.getElementById('menu-btn');
+        const mobileMenu = document.getElementById('mobile-menu');
+        const mobileDropdownBtn = document.getElementById('mobile-dropdown-btn');
+        const mobileDropdownMenu = document.getElementById('mobile-dropdown-menu');
+        const mobileDropdownIcon = mobileDropdownBtn.querySelector('svg');
+
+        menuBtn.addEventListener('click', () => {
+            mobileMenu.classList.toggle('hidden');
+        });
+        
+        // Sluit menu wanneer op een link wordt geklikt (inclusief sub-items)
+        const mobileMenuLinks = mobileMenu.querySelectorAll('a');
+        mobileMenuLinks.forEach(link => {
+            link.addEventListener('click', () => {
+                mobileMenu.classList.add('hidden');
+            });
+        });
+
+        // Toggle voor mobiel dropdown menu
+        mobileDropdownBtn.addEventListener('click', () => {
+            mobileDropdownMenu.classList.toggle('hidden');
+            mobileDropdownIcon.classList.toggle('rotate-180');
+        });
+    </script>
+</body>
+</html>
+
